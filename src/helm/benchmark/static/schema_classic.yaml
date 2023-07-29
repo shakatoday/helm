@@ -2244,12 +2244,6 @@ run_groups:
     environment:
       main_name: exact_match
       main_split: test
-    taxonomy:
-      task: question answering
-      what: medical, open-domain, or truthful qa
-      who: n/a
-      when: 2022 or before
-      language: Chinese
 
   - name: cleva_summarization
     display_name: CLEVA (Chinese) summarization
@@ -2787,6 +2781,25 @@ run_groups:
       who: automatically generated from templates
       when: '2023'
       language: synthetic
+
+## Financial scenarios
+  - name: fin_qa
+    display_name: FinQA
+    short_display_name: FinQA
+    description: FinQA is a question answering task over financial reports that requires robust numerical reasoning [(Chen et al., 2021)](https://arxiv.org/abs/2109.00122).
+    metric_groups:
+      - accuracy
+      - calibration
+      - general_information
+    environment:
+      main_name: f1_score
+      main_split: test
+    taxonomy:
+      task: question answering
+      what: "?"
+      who: "?"
+      when: "?"
+      language: English
 
 ## Aspirational scenarios
 # Task coverage
