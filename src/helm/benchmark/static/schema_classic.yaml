@@ -534,6 +534,16 @@ metrics:
     description: The accuracy for the 10% of predictions that the model is most confident on (only computed for classification tasks).
     lower_is_better: false
 
+  # FinQA metrics:
+  - name: program_accuracy
+    display_name: Program Accuracy
+    description: Accuracy of program
+    lower_is_better: false
+  - name: execution_accuracy
+    display_name: Execution Accuracy
+    description: Accuracy of evaluation
+    lower_is_better: false
+
   # CLEVA (Chinese) metrics:
   # Accuracy metrics (Chinese)
   - name: chinese_ibleu
@@ -2798,7 +2808,7 @@ run_groups:
       - calibration
       - general_information
     environment:
-      main_name: f1_score
+      main_name: program_accuracy
       main_split: test
     taxonomy:
       task: question answering
