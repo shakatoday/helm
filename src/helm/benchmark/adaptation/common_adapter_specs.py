@@ -259,7 +259,7 @@ def get_generation_adapter_spec(
         num_outputs=num_outputs,
         max_tokens=max_tokens,
         temperature=temperature,
-        stop_sequences=stop_sequences,
+        stop_sequences=[],
         multi_label=multi_label,
     )
 
