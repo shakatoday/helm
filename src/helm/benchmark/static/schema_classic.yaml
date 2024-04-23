@@ -2244,6 +2244,12 @@ run_groups:
     environment:
       main_name: exact_match
       main_split: test
+    taxonomy:
+      task: question answering
+      what: medical, open-domain, or truthful qa
+      who: n/a
+      when: 2022 or before
+      language: Chinese
 
   - name: cleva_summarization
     display_name: CLEVA (Chinese) summarization
