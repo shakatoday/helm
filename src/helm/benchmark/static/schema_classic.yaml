@@ -534,16 +534,6 @@ metrics:
     description: The accuracy for the 10% of predictions that the model is most confident on (only computed for classification tasks).
     lower_is_better: false
 
-  # FinQA metrics:
-  - name: program_accuracy
-    display_name: Program Accuracy
-    description: Accuracy of program
-    lower_is_better: false
-  - name: execution_accuracy
-    display_name: Execution Accuracy
-    description: Accuracy of evaluation
-    lower_is_better: false
-
   # CLEVA (Chinese) metrics:
   # Accuracy metrics (Chinese)
   - name: chinese_ibleu
@@ -2797,25 +2787,6 @@ run_groups:
       who: automatically generated from templates
       when: '2023'
       language: synthetic
-
-## Financial scenarios
-  - name: fin_qa
-    display_name: FinQA
-    short_display_name: FinQA
-    description: FinQA is a question answering task over financial reports that requires robust numerical reasoning [(Chen et al., 2021)](https://arxiv.org/abs/2109.00122).
-    metric_groups:
-      - accuracy
-      - calibration
-      - general_information
-    environment:
-      main_name: program_accuracy
-      main_split: test
-    taxonomy:
-      task: question answering
-      what: "?"
-      who: "?"
-      when: "?"
-      language: English
 
 ## Aspirational scenarios
 # Task coverage
